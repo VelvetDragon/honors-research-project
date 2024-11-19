@@ -1,0 +1,143 @@
+/* src/styles/Methodology.module.css */
+
+.methodologyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 80px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  color: #333333; /* Dark text for readability */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Background Section */
+.backgroundSection {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.backgroundSection .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.backgroundSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Berkshire Swash", serif;
+}
+
+.backgroundSection p {
+  font-size: 1.2rem;
+  max-width: 800px;
+}
+
+/* Data Collection Section */
+.dataCollection {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dataCollection h2 {
+  color: var(--primary-color, #1e90ff); /* Use CSS variable or fallback */
+  margin-bottom: 1rem;
+}
+
+.dataCollection p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Sentiment Analysis Section */
+.sentimentAnalysis {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sentimentAnalysis h2 {
+  color: var(--primary-color, #1e90ff);
+  margin-bottom: 1rem;
+}
+
+.sentimentAnalysis p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.sentimentAnalysis ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.sentimentAnalysis ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Data Annotation Section */
+.dataAnnotation {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dataAnnotation h2 {
+  color: var(--primary-color, #1e90ff);
+  margin-bottom: 1rem;
+}
+
+.dataAnnotation p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .backgroundSection {
+    height: 40vh;
+  }
+
+  .backgroundSection h1 {
+    font-size: 2rem;
+  }
+
+  .backgroundSection p {
+    font-size: 1rem;
+  }
+
+  .dataCollection,
+  .sentimentAnalysis,
+  .dataAnnotation {
+    padding: 1.5rem;
+  }
+}

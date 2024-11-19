@@ -1,0 +1,98 @@
+/* src/styles/Home.module.css */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bannerImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100vh;
+  z-index: -1;
+  /* overflow: hidden; */
+}
+
+.bannerImage img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-family: "Berkshire Swash", serif;
+  color: #FFD700; /* Shiny gold color */
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 8px rgba(255, 217, 0, 0.945); /* Add glow effect */
+}
+
+
+
+.heroContent {
+  text-align: center;
+  max-width: 700px;
+  padding: 4rem 4rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.heroContent h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color-1);
+}
+
+.heroContent p {
+  font-size: 1.1rem;
+  color: white; /* Lighter golden color */
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  background-color: #ff2400;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: background-color 0.1s ease;
+  text-decoration: none;
+  
+}
+
+.ctaButton:hover {
+  background-color: #FFB700; /* Lighter gold on hover */
+  box-shadow: 0px 4px 10px rgba(255, 183, 0, 0.7);
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+
+  .pageSubTitle {
+    font-size: 1.2rem;
+  }
+
+  .ctaButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

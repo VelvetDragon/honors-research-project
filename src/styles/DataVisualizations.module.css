@@ -1,0 +1,39 @@
+/* src/styles/DataVisualizations.module.css */
+
+.visualizations {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  
+  .visualizations h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+  
+  .filters label {
+    margin-right: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .filters select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .charts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  

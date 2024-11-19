@@ -1,0 +1,103 @@
+{
+    "mulan": [
+      {
+        "scene": "Opening",
+        "positive": 40,
+        "neutral": 30,
+        "negative": 10
+      },
+      {
+        "scene": "Climax",
+        "positive": 60,
+        "neutral": 20,
+        "negative": 30
+      },
+      {
+        "scene": "Resolution",
+        "positive": 50,
+        "neutral": 25,
+        "negative": 15
+      }
+    ],
+    "moana": [
+      {
+        "scene": "Opening",
+        "positive": 35,
+        "neutral": 25,
+        "negative": 5
+      },
+      {
+        "scene": "Climax",
+        "positive": 55,
+        "neutral": 20,
+        "negative": 25
+      },
+      {
+        "scene": "Resolution",
+        "positive": 45,
+        "neutral": 30,
+        "negative": 10
+      }
+    ],
+    "the-princess-and-the-frog": [
+      {
+        "scene": "Opening",
+        "positive": 30,
+        "neutral": 40,
+        "negative": 10
+      },
+      {
+        "scene": "Climax",
+        "positive": 50,
+        "neutral": 25,
+        "negative": 20
+      },
+      {
+        "scene": "Resolution",
+        "positive": 60,
+        "neutral": 15,
+        "negative": 5
+      }
+    ],
+    "pocahontas": [
+      {
+        "scene": "Opening",
+        "positive": 25,
+        "neutral": 35,
+        "negative": 20
+      },
+      {
+        "scene": "Climax",
+        "positive": 45,
+        "neutral": 25,
+        "negative": 30
+      },
+      {
+        "scene": "Resolution",
+        "positive": 55,
+        "neutral": 20,
+        "negative": 10
+      }
+    ],
+    "aladdin": [
+      {
+        "scene": "Opening",
+        "positive": 40,
+        "neutral": 30,
+        "negative": 15
+      },
+      {
+        "scene": "Climax",
+        "positive": 60,
+        "neutral": 20,
+        "negative": 25
+      },
+      {
+        "scene": "Resolution",
+        "positive": 50,
+        "neutral": 25,
+        "negative": 10
+      }
+    ]
+  }
+  

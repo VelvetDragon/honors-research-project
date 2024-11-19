@@ -1,0 +1,81 @@
+/* src/styles/Navbar.module.css */
+
+.navbar {
+  position: fixed; /* Keeps the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Adjust as needed */
+  display: flex;
+  justify-content: space-around; /* Space between logo and nav links */
+  align-items: center;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black for contrast */
+  backdrop-filter: blur(0px); /* Optional: adds a blur effect */
+  z-index: 1000; /* Ensures navbar is above other elements */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  color: white; /* White text for better contrast */
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-family: "Berkshire Swash", serif;
+}
+.logoText a {
+  color: #ffffff; /* White color for better contrast */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Increased gap for better spacing */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li a {
+  color: #ffffff; /* White color for better contrast */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a:hover,
+.navLinks li a:focus {
+  color: #ffcc00; /* Accent color on hover/focus */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navLinks li a {
+    font-size: 1.2rem;
+  }
+
+  .logoText {
+    font-size: 1.2rem;
+    margin-left: 8px;
+  }
+}

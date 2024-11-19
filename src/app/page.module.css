@@ -10,10 +10,20 @@
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
   justify-items: center;
-  min-height: 100svh;
+  max-height: 100vh;
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly dark background for readability */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -129,7 +139,7 @@ a.secondary {
 @media (max-width: 600px) {
   .page {
     padding: 32px;
-    padding-bottom: 80px;
+    
   }
 
   .main {
