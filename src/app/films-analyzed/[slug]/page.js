@@ -1,16 +1,13 @@
 // src/app/films-analyzed/[slug]/page.js
-'use client';
 
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import moviesData from '@/data/movies.json';
 import styles from '@/styles/MoviePage.module.css';
 import Link from 'next/link';
-import Script from '@/components/Script';
-import VideoEmbed from '@/components/VideoEmbed';
-import DialoguesChart from '@/components/DialoguesChart';
-import dialoguesData from '@/data/dialoguesData.json';
+import Script from '@/components/Script'; 
 import AnimatedSection from '@/components/AnimatedSection';
+
 
 export default function MoviePage({ params }) {
   const { slug } = params;
@@ -30,6 +27,7 @@ export default function MoviePage({ params }) {
             width={300}
             height={450}
             className={styles.poster}
+            priority={false}
           />
           <div className={styles.details}>
             <h1>{movie.title}</h1>
@@ -47,12 +45,34 @@ export default function MoviePage({ params }) {
           </p>
           <h3>Script Excerpts</h3>
           <Script content={movie.scriptExcerpt} />
-          <h3>Key Scene Video</h3>
-          <VideoEmbed videoId={movie.keySceneVideoId} />
+          
+         
+          
           <h3>Emotional Tone Distribution</h3>
-          <DialoguesChart data={dialoguesData[movie.slug]} />
-          <Link href="/films-analyzed">
-            <a className={styles.backButton} aria-label="Back to Films Analyzed">← Back to Films Analyzed</a>
+          
+          {/* Replace DialoguesChart with saved matplotlib image */}
+          <Image
+            src={`/images/films-analyzed/${slug}/sentiment_distribution.png`}
+            alt={`Sentiment Distribution for ${movie.title}`}
+            width={800}
+            height={600}
+            className={styles.visualizationImage}
+          />
+          
+          {/* Example of another visualization image */}
+          <h3>Average Sentiment by Character Role</h3>
+          <Image
+            src={`/images/films-analyzed/${slug}/average_sentiment_by_role.png`}
+            alt={`Average Sentiment by Character Role in ${movie.title}`}
+            width={800}
+            height={600}
+            className={styles.visualizationImage}
+          />
+          
+          {/* Add more images as needed */}
+          
+          <Link href="/films-analyzed" legacyBehavior>
+            <a className={styles.backButton} aria-label="Back to Films Analyzed"> ← Back to Films Analyzed</a>
           </Link>
         </div>
       </AnimatedSection>

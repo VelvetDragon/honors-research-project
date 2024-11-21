@@ -4,7 +4,7 @@ import styles from '@/styles/DialoguesChart.module.css';
 
 const DialoguesChart = ({ data }) => {
   const handleClick = (data, index) => {
-    // Implement functionality, e.g., display detailed information
+    
     alert(`Scene: ${data.scene}\nPositive: ${data.positive}\nNeutral: ${data.neutral}\nNegative: ${data.negative}`);
   };
 
