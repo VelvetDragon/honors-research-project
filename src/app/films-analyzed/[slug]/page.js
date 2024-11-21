@@ -43,7 +43,7 @@ export default function MoviePage({ params }) {
         <div className={styles.analysis}>
           <h2>Sentiment Analysis</h2>
           <p>
-            This section delves into the emotional tones conveyed through the dialogues of characters in <strong>{movie.title}</strong>. Using sentiment analysis tools like VADER and BERT, we've categorized dialogues into positive, neutral, and negative sentiments to uncover underlying patterns and stereotypes.
+            This section delves into the emotional tones conveyed through the dialogues of characters in <strong>{movie.title}</strong>. Using sentiment analysis tools like VADER, I have categorized dialogues into positive, neutral, and negative sentiments to uncover underlying patterns and stereotypes.
           </p>
           <h3>Script Excerpts</h3>
           <Script content={movie.scriptExcerpt} />
