@@ -19,8 +19,8 @@ export default function About() {
         <div className={styles.overlay}>
           <h1>About the Project</h1>
           <p>
-            <span className='spans'> Unmasking Emotions: Disney Characters Through Data </span> is part of my sophomore Honors Research Project at the University of Southern Mississippi. This study examines how Disney characters express <span className='spans'>emotions </span> in their dialogues across different films.
-            Using <span className='spans'>sentiment analysis </span> tools, this research uncovers patterns in emotional expression, focusing on how gender, race, and cultural background influence these patterns. The goal is to explore whether these portrayals reflect or challenge <span className='spans'>stereotypes </span> in animated storytelling, contributing to a deeper understanding of representation in popular media.
+            <span> Unmasking Emotions: Disney Characters Through Data </span> is part of my sophomore Honors Research Project at the University of Southern Mississippi. This study examines how Disney characters express <span>emotions </span> in their dialogues across different films.
+            Using <span>sentiment analysis </span> tools, this research uncovers patterns in emotional expression, focusing on how gender, race, and cultural background influence these patterns. The goal is to explore whether these portrayals reflect or challenge <span>stereotypes </span> in animated storytelling, contributing to a deeper understanding of representation in popular media.
           </p>
         </div>
       </section>
@@ -44,7 +44,7 @@ export default function About() {
         <div className={styles.objectives}>
           <h2>Research Objectives</h2>
           <p>
-            This research aims to investigate how Disney character dialogues convey emotional tones and whether these tones vary between characters of different genders, racial, and cultural backgrounds using sentiment analysis tools. Specifically, the study seeks to:
+            This research aims to investigate how Disney character dialogues convey emotional tones and whether these tones vary between characters of different genders, racial, and cultural backgrounds using sentiment analysis tools. Specifically, this study seeks to:
           </p>
           <ul>
             <li>Analyze the emotional content of dialogues in selected Disney films.</li>
@@ -55,7 +55,7 @@ export default function About() {
       </AnimatedSection>
 
       {/* Team Section */}
-      <AnimatedSection>
+      {/* <AnimatedSection>
         <div className={styles.team}>
           <h2>About the Researcher</h2>
           <div className={styles.teamMember}>
@@ -74,7 +74,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </AnimatedSection>
+      </AnimatedSection> */}
     </div>
   );
 }

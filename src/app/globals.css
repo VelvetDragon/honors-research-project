@@ -90,6 +90,7 @@ body.dark {
 
 /* Customize Focus Outlines */
 a:focus,
+a:active,
 button:focus,
 input:focus,
 textarea:focus,

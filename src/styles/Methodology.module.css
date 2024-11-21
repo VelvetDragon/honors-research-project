@@ -121,6 +121,250 @@
   margin-bottom: 1rem;
 }
 
+.dataAnnotation ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.dataAnnotation ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+/* Data Preprocessing Section */
+.dataPreprocessing {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dataPreprocessing h2 {
+  color: var(--primary-color, #1e90ff);
+  margin-bottom: 1rem;
+}
+
+.dataPreprocessing p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.dataPreprocessing ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.dataPreprocessing ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Analysis techniques Section */
+.analysisTechniques {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.analysisTechniques h2 {
+  color: var(--primary-color, #1e90ff);
+  margin-bottom: 1rem;
+}
+
+.analysisTechniques p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.analysisTechniques ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.analysisTechniques ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Ethics Section */
+.ethics {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ethics h2 {
+  color: var(--primary-color, #1e90ff);
+  margin-bottom: 1rem;
+}
+
+.ethics p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.ethics ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.ethics ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Flowchart Styles */
+.flowchart {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.flowchart img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Limitations Section */
+
+.limitations {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.limitations h2 {
+  color: var(--primary-color, #1e90ff);
+  margin-bottom: 1rem;
+}
+
+.limitations p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.limitations ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.limitations ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Flowchart Styles */
+.flowchart {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Targeting Mermaid-generated SVGs */
+.flowchart .mermaid {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.flowchart svg {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tools Used Section Styles */
+.toolsUsed {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toolsUsed h2 {
+  color: var(--primary-color, #1e90ff);
+  margin-bottom: 1rem;
+}
+
+.toolsUsed p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.toolItem {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toolItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.toolImage {
+  transition: transform 0.3s ease;
+}
+
+.toolItem:hover .toolImage {
+  transform: scale(1.1);
+}
+
+.toolsUsed h3 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.toolsUsed p {
+  font-size: 0.95rem;
+  color: #666666;
+}
+
+.toolItem {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0; 
+}
+
+
+.toolsUsed {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0; 
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .backgroundSection {
@@ -135,9 +379,15 @@
     font-size: 1rem;
   }
 
+  .flowchart svg {
+    width: 100%;
+    height: auto;
+  }
+
   .dataCollection,
   .sentimentAnalysis,
-  .dataAnnotation {
+  .dataAnnotation,
+  .dataPreprocessing,.analysisTechniques,.ethics,.limitations {
     padding: 1.5rem;
   }
 }
