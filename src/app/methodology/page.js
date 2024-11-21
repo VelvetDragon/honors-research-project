@@ -24,7 +24,7 @@ export default function Methodology() {
       {/* Background Section */}
       <section className={styles.backgroundSection}>
         <Image
-          src="/images/about-background.jpg" // Ensure this image exists in public/images/
+          src="/images/about-background.jpg"
           alt="Abstract representation of research methodology"
           fill
           style={{ objectFit: 'cover', opacity: 0.5 }}
@@ -39,17 +39,17 @@ export default function Methodology() {
       </section>
 
       {/* Data Collection Section */}
-      
-        <div className={styles.dataCollection}>
-          <h2>Data Collection</h2>
-          <p>
-            Scripts for the selected Disney films were sourced from reliable online databases such as <a href="https://www.springfieldspringfield.co.uk/" target="_blank" rel="noopener noreferrer">Springfield! Springfield!</a> and <a href="https://imsdb.com/" target="_blank" rel="noopener noreferrer">Internet Movie Script Database (IMSDb)</a>. The selection criteria included films released between 1990 and 2020, encompassing a diverse range of genres and characters.
-          </p>
-          <p>
-            Each line of dialogue was meticulously extracted and tagged with the corresponding character’s identity, including attributes such as gender, race, and cultural background. This process was automated using custom Python scripts, ensuring accuracy and efficiency in data collection.
-          </p>
-        </div>
-      
+
+      <div className={styles.dataCollection}>
+        <h2>Data Collection</h2>
+        <p>
+          Scripts for the selected Disney films were sourced from reliable online databases such as <a href="https://www.springfieldspringfield.co.uk/" target="_blank" rel="noopener noreferrer">Springfield! Springfield!</a> and <a href="https://imsdb.com/" target="_blank" rel="noopener noreferrer">Internet Movie Script Database (IMSDb)</a>. The selection criteria included films released between 1990 and 2020, encompassing a diverse range of genres and characters.
+        </p>
+        <p>
+          Each line of dialogue was meticulously extracted and tagged with the corresponding character’s identity, including attributes such as gender, race, and cultural background. This process was automated using custom Python scripts, ensuring accuracy and efficiency in data collection.
+        </p>
+      </div>
+
 
       {/* Data Preprocessing Section */}
       <AnimatedSection>
@@ -61,10 +61,10 @@ export default function Methodology() {
           <ul>
             <li><strong>Data Cleaning:</strong> Removal of non-verbal cues, stage directions, and irrelevant annotations to isolate the spoken dialogues.</li>
             <li><strong>Data Normalization:</strong> Standardizing the text by converting all characters to lowercase, removing punctuation, and eliminating stopwords to ensure consistency across the dataset.</li>
-            <li><strong>Expanding Contractions:</strong> Converting contractions (e.g., "don't" to "do not") to their expanded forms to maintain consistency and improve analysis accuracy.</li>
+            <li><strong>Expanding Contractions:</strong> Converting contractions (e.g., &quot;don&apos;t&quot; to &quot;do not&quot;) to their expanded forms to maintain consistency and improve analysis accuracy.</li>
           </ul>
           <p>
-            These preprocessing steps were implemented using Python's NLTK library, which offers robust tools for natural language processing tasks.
+            These preprocessing steps were implemented using Python&apos;s NLTK library, which offers robust tools for natural language processing tasks.
           </p>
           {/* Flowchart Example */}
           <div className={styles.flowchart}>
@@ -92,7 +92,7 @@ export default function Methodology() {
             Each emotional tone was assigned a numerical value (+1 for positive, 0 for neutral, -1 for negative) or represented with emojis to facilitate comparative analysis and make the project more engaging.
           </p>
           <p>
-            The VADER tool was integrated into the analysis pipeline using Python's <code>vaderSentiment</code> library, allowing for efficient and scalable sentiment scoring of extensive dialogue datasets.
+            The VADER tool was integrated into the analysis pipeline using Python&apos;s <code>vaderSentiment</code> library, allowing for efficient and scalable sentiment scoring of extensive dialogue datasets.
           </p>
         </div>
       </AnimatedSection>
