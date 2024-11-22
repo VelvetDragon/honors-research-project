@@ -12,7 +12,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 export default function MoviePage({ params }) {
   const { slug } = params;
   const movie = moviesData.find((m) => m.slug === slug);
-
+  
   if (!movie) {
     notFound();
   }

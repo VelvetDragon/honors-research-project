@@ -38,6 +38,29 @@ export default function Methodology() {
         </div>
       </section>
 
+      {/* Film Selection */}
+      <div className={styles.filmSelection}>
+        <h2>Film Selection</h2>
+        <p>
+          A diverse range of Disney films released between 1990 and 2020 were selected to ensure a comprehensive analysis across different eras and cultural contexts. The selection criteria included:
+        </p>
+        <ul>
+          <li>Release Year: 1990 - 2020</li>
+          <li>Diversity of Characters: Inclusion of various genders, races, and cultural backgrounds</li>
+          <li>Genre Variation: Encompassing different genres to capture a wide range of dialogues</li>
+        </ul>
+        <p>Selected Films:</p>
+        <ul>
+          <li>Mulan</li>
+          <li>Moana</li>
+          <li>The Princess and the Frog</li>
+          <li>Pocahontas</li>
+          <li>Aladdin</li>
+          {/* <li>Raya and the Last Dragon</li> */}
+          <li>Coco</li>
+        </ul>
+      </div>
+
       {/* Data Collection Section */}
 
       <div className={styles.dataCollection}>
@@ -73,12 +96,27 @@ export default function Methodology() {
         </div>
       </AnimatedSection>
 
-      {/* Sentiment Analysis Section */}
+      
+      {/* Sentiment Analysis */}
       <AnimatedSection>
         <div className={styles.sentimentAnalysis}>
           <h2>Sentiment Analysis</h2>
           <p>
-            Sentiment analysis was conducted using VADER (Valence Aware Dictionary and sEntiment Reasoner), a lexicon and rule-based sentiment analysis tool specifically attuned to sentiments expressed in social media. VADER was selected for its effectiveness in handling emoticons, slang, and the informal language often found in animated dialogues.
+            <strong>Sentiment Analysis</strong>, also known as opinion mining, is a natural language processing (NLP) technique used to determine the emotional tone behind a series of words. It aims to identify and categorize opinions expressed in a text, especially to determine the writer's attitude towards a particular topic, product, or context.<sup><a href="#cite4">4</a></sup>
+          </p>
+          <p>
+            Originating from the need to analyze customer feedback and social media sentiments, sentiment analysis has evolved with advancements in machine learning and deep learning. Today, it encompasses various approaches, including lexicon-based methods and machine learning models.<sup><a href="#cite5">5</a></sup>
+          </p>
+          <p>
+            In this research, sentiment analysis serves as a pivotal tool to dissect and understand the emotional undertones embedded in Disney character dialogues. By quantifying emotions, the study aims to:
+          </p>
+          <ul>
+            <li>Identify prevalent emotional expressions among different characters.</li>
+            <li>Compare sentiment distributions across various demographic groups, such as gender, race, and cultural background.</li>
+            <li>Uncover patterns that may either reinforce or challenge existing stereotypes in animated storytelling.</li>
+          </ul>
+          <p>
+            Sentiment analysis was conducted using VADER (Valence Aware Dictionary and sEntiment Reasoner), a lexicon and rule-based sentiment analysis tool specifically attuned to sentiments expressed in social media.<sup><a href="#cite2">2</a></sup> VADER was selected for its effectiveness in handling emoticons, slang, and the informal language often found in animated dialogues.
           </p>
           <p>
             Emotional expressions were categorized as:
@@ -92,7 +130,7 @@ export default function Methodology() {
             Each emotional tone was assigned a numerical value (+1 for positive, 0 for neutral, -1 for negative) or represented with emojis to facilitate comparative analysis and make the project more engaging.
           </p>
           <p>
-            The VADER tool was integrated into the analysis pipeline using Python&apos;s <code>vaderSentiment</code> library, allowing for efficient and scalable sentiment scoring of extensive dialogue datasets.
+            The VADER tool was integrated into the analysis pipeline using Python&apos;s <code>vaderSentiment</code> library, allowing for efficient and scalable sentiment scoring of extensive dialogue datasets.<sup><a href="#cite2">2</a></sup>
           </p>
         </div>
       </AnimatedSection>
@@ -141,18 +179,6 @@ export default function Methodology() {
               <h3>matplotlib</h3>
               <p>A plotting library for creating static, animated, and interactive visualizations in Python.</p>
             </div>
-            {/* VADER */}
-            {/* <div className={styles.toolItem}>
-              <Image
-                src="/images/nltk.png" // Using NLTK image for VADER as well
-                alt="VADER Logo"
-                width={80}
-                height={80}
-                className={styles.toolImage}
-              />
-              <h3>VADER</h3>
-              <p>A sentiment analysis tool specifically attuned to sentiments expressed in social media.</p>
-            </div> */}
             {/* NLTK */}
             <div className={styles.toolItem}>
               <Image
@@ -183,9 +209,9 @@ export default function Methodology() {
             <li><strong>Demographic Profiling:</strong> Categorizing characters based on predefined demographic attributes.</li>
             <li><strong>Cultural Contextualization:</strong> Understanding and labeling dialogues that are influenced by cultural nuances or references.</li>
           </ul>
-          <p>
+          {/* <p>
             Tools such as <a href="https://www.labelbox.com/" target="_blank" rel="noopener noreferrer">Labelbox</a> were utilized to streamline the annotation process, ensuring consistency and accuracy in labeling.
-          </p>
+          </p> */}
         </div>
       </AnimatedSection>
 
@@ -195,7 +221,7 @@ export default function Methodology() {
           <h2>Analysis Techniques</h2>
           <p>
             {/* The annotated data was subjected to various analytical techniques to uncover patterns and insights: */}
-            Still needs to be done completely .....
+            Still needs to be done completely ..... (trying to include things like descriptive statistic, correlation studies, visualizations etc)
           </p>
           {/* <ul>
             <li><strong>Descriptive Statistics:</strong> Calculating the distribution of sentiment scores across different demographic groups.</li>
@@ -215,7 +241,7 @@ export default function Methodology() {
           <h2>Ethical Considerations</h2>
           <p>
             {/* Ethical guidelines were strictly adhered to throughout the research process. */}
-            Key considerations included:..............
+            Key considerations included:.............. (like bias mitigation, transparency etc)
           </p>
           {/* 
           <ul>

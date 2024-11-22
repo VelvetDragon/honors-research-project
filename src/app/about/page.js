@@ -2,6 +2,7 @@
 import styles from '@/styles/About.module.css';
 import AnimatedSection from '@/components/AnimatedSection';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -27,16 +28,16 @@ export default function About() {
 
 
       {/* Background Content */}
-      
-        <div className={styles.background}>
-          <h2>Background</h2>
-          <p>
-            Disney films are a cornerstone of global entertainment, captivating audiences with their compelling characters and timeless stories. Beyond entertainment, these films influence cultural narratives, shaping societal perceptions of gender, race, and identity. Previous research has explored dialogue imbalances in Disney films, revealing patterns in how different characters are portrayed. However, less attention has been paid to the emotional tones conveyed in character dialogues.
-          </p>
-          <p>
-            This research addresses this gap by analyzing emotional expressions in Disney films through sentiment analysis. By examining emotional tones across characters of varying genders, races, and cultural backgrounds, the study seeks to uncover patterns that either reinforce or challenge societal stereotypes. This exploration is critical in understanding how popular media impacts audience perceptions and reflects cultural norms.
-          </p>
-        </div>
+
+      <div className={styles.background}>
+        <h2>Background</h2>
+        <p>
+          Disney films are a cornerstone of global entertainment, captivating audiences with their compelling characters and timeless stories. Beyond entertainment, these films influence cultural narratives, shaping societal perceptions of gender, race, and identity. Previous research has explored dialogue imbalances in Disney films, revealing patterns in how different characters are portrayed. However, less attention has been paid to the emotional tones conveyed in character dialogues.
+        </p>
+        <p>
+          This research addresses this gap by analyzing emotional expressions in Disney films through sentiment analysis. By examining emotional tones across characters of varying genders, races, and cultural backgrounds, the study seeks to uncover patterns that either reinforce or challenge societal stereotypes. This exploration is critical in understanding how popular media impacts audience perceptions and reflects cultural norms.
+        </p>
+      </div>
 
 
       {/* Objectives Section */}
@@ -55,15 +56,15 @@ export default function About() {
       </AnimatedSection>
 
       {/* Team Section */}
-      {/* <AnimatedSection>
+      <AnimatedSection>
         <div className={styles.team}>
           <h2>About the Researcher</h2>
           <div className={styles.teamMember}>
             <Image
-              src="/images/researcher.jpg" // Replace with your image
-              alt="Researcher Photo"
-              width={150}
-              height={150}
+              src="/images/researcher.jpg"
+              alt='Researcher Photo'
+              width={250}
+              height={250}
               className={styles.researcherPhoto}
             />
             <div className={styles.researcherInfo}>
@@ -74,7 +75,12 @@ export default function About() {
             </div>
           </div>
         </div>
-      </AnimatedSection> */}
+      </AnimatedSection>
+
+      <Link href="/methodology" legacyBehavior>
+            <a className={styles.nxtPage} aria-label="Next page"> Next page ➡ </a>
+      </Link>
+
     </div>
   );
 }
