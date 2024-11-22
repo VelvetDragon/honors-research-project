@@ -5,6 +5,7 @@ import styles from '@/styles/Methodology.module.css';
 import AnimatedSection from '@/components/AnimatedSection';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 
 // Dynamically import MermaidChart with SSR disabled
 const MermaidChart = dynamic(() => import('@/components/MermaidChart'), { ssr: false });
@@ -275,6 +276,9 @@ export default function Methodology() {
           */}
         </div>
       </AnimatedSection>
+      <Link href="/films-analyzed" legacyBehavior>
+            <a className={styles.nxtPage} aria-label="Next page"> Next page ➡ </a>
+      </Link>
     </div>
   );
 }
