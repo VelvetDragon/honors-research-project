@@ -1,0 +1,146 @@
+/* src/styles/References.module.css */
+
+.referencesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  color: #333333; /* Dark text for readability */
+  font-family: "Roboto", sans-serif; /* Consistent font */
+}
+
+.references {
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #ffffff; /* White background for the content area */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.references h2 {
+  color: var(--secondary-color); /* Primary color for headings */
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Go Back Button Styling */
+.goBackButton {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.goBackButton:hover {
+  background-color: #0d6efd;
+}
+
+/* Remove default list styles and set up counters */
+.references ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  counter-reset: citation; /* Initialize counter */
+}
+
+/* Style for each reference item */
+.references li {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  position: relative;
+  border-left: 4px solid var(--secondary-color); /* Vertical line for citations */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  counter-increment: citation; /* Increment counter */
+}
+
+/* Style for the citation number */
+.references li::before {
+  content: counter(citation); /* Display counter value */
+  position: absolute;
+  left: -1.2rem;
+  top: 0.5rem;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Highlight class for referenced items */
+.highlight {
+  background-color: #ffffcc; /* Light yellow background */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Link Styling */
+.references li a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.references li a:hover {
+  text-decoration: underline;
+}
+
+/* External Link Icon Styling */
+.referenceLink {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #1e90ff;
+  transition: color 0.3s ease;
+}
+
+.referenceLink:hover {
+  color: #0d6efd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .referencesContainer {
+    padding: 40px 10px;
+  }
+
+  .references {
+    padding: 1.5rem;
+  }
+
+  .references h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .goBackButton {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .references li {
+    padding-left: 1rem;
+  }
+
+  .references li::before {
+    left: -1rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .referenceLink {
+    font-size: 0.9rem;
+  }
+}

@@ -33,7 +33,7 @@ export default function Methodology() {
         <div className={styles.overlay}>
           <h1>Methodology</h1>
           <p>
-            This section explains the <span>methods</span> used to study <span>emotional expressions</span> in Disney character dialogues. Using <span>sentiment analysis tools</span>, the research identifies and interprets <span>emotional tones</span> to find patterns that may support or challenge stereotypes. It covers data collection, cleaning, and analysis. Ethical practices and validation steps are yet to be included.....
+            This section explains the <span>methods</span> used to study <span>emotional expressions</span> in Disney character dialogues. Using <span>sentiment analysis tools</span>, the research identifies and interprets <span>emotional tones</span> to find patterns that may support or challenge stereotypes. It covers data collection, preprocessing, and analysis. Ethical practices and validation steps are yet to be included.....
           </p>
         </div>
       </section>
@@ -96,16 +96,15 @@ export default function Methodology() {
         </div>
       </AnimatedSection>
 
-      
       {/* Sentiment Analysis */}
       <AnimatedSection>
         <div className={styles.sentimentAnalysis}>
           <h2>Sentiment Analysis</h2>
           <p>
-            <strong>Sentiment Analysis</strong>, also known as opinion mining, is a natural language processing (NLP) technique used to determine the emotional tone behind a series of words. It aims to identify and categorize opinions expressed in a text, especially to determine the writer's attitude towards a particular topic, product, or context.<sup><a href="#cite4">4</a></sup>
+            <strong>Sentiment Analysis</strong>, also known as opinion mining, is a natural language processing (NLP) technique used to determine the emotional tone behind a series of words. Sentiment analysis is the extraction of sentiment, opinions, and emotions from text. It aims to identify and categorize opinions expressed in a text, especially to determine the writer's attitude towards a particular topic, product, or context. <strong><sup><a href="/references/#cite5">5</a></sup></strong>
           </p>
           <p>
-            Originating from the need to analyze customer feedback and social media sentiments, sentiment analysis has evolved with advancements in machine learning and deep learning. Today, it encompasses various approaches, including lexicon-based methods and machine learning models.<sup><a href="#cite5">5</a></sup>
+            Originating from the need to analyze customer feedback and social media sentiments, sentiment analysis has evolved with advancements in machine learning and deep learning. Today, it encompasses various approaches, including lexicon-based methods and machine learning models.<strong><sup><a href="/references/#cite1">1</a></sup></strong>
           </p>
           <p>
             In this research, sentiment analysis serves as a pivotal tool to dissect and understand the emotional undertones embedded in Disney character dialogues. By quantifying emotions, the study aims to:
@@ -116,7 +115,7 @@ export default function Methodology() {
             <li>Uncover patterns that may either reinforce or challenge existing stereotypes in animated storytelling.</li>
           </ul>
           <p>
-            Sentiment analysis was conducted using VADER (Valence Aware Dictionary and sEntiment Reasoner), a lexicon and rule-based sentiment analysis tool specifically attuned to sentiments expressed in social media.<sup><a href="#cite2">2</a></sup> VADER was selected for its effectiveness in handling emoticons, slang, and the informal language often found in animated dialogues.
+            Sentiment analysis was conducted using VADER (Valence Aware Dictionary and sEntiment Reasoner).VADER sentiment is a rule-based and lexicon-based framework for sentiment analysis, with support for intensity estimation. The frameworks have performed as well as human raters on Twitter data <strong><sup><a href="/references/#cite4">4</a></sup></strong>. Further, VADER sentiment performed better or equally when compared against seven sentiment analysis lexicons.<strong><sup><a href="/references/#cite4">4</a></sup></strong> VADER was selected for its effectiveness in handling emoticons, slang, and the informal language often found in animated dialogues.
           </p>
           <p>
             Emotional expressions were categorized as:
@@ -130,10 +129,11 @@ export default function Methodology() {
             Each emotional tone was assigned a numerical value (+1 for positive, 0 for neutral, -1 for negative) or represented with emojis to facilitate comparative analysis and make the project more engaging.
           </p>
           <p>
-            The VADER tool was integrated into the analysis pipeline using Python&apos;s <code>vaderSentiment</code> library, allowing for efficient and scalable sentiment scoring of extensive dialogue datasets.<sup><a href="#cite2">2</a></sup>
+            The VADER tool was integrated into the analysis pipeline using Python&apos;s <code>vaderSentiment</code> library, allowing for efficient and scalable sentiment scoring of extensive dialogue datasets.
           </p>
         </div>
       </AnimatedSection>
+
 
       {/* Tools Used Section */}
       <AnimatedSection>

@@ -98,4 +98,7 @@ select:focus {
   outline: var(--secondary-color); /* Accent color */
   outline-offset: 1px;
 }
+sup {
+  columns: var(--secondary-color);
+}
 
