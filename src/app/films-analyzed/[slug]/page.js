@@ -65,7 +65,7 @@ export default async function MoviePage({ params }) {
             className={styles.visualizationImage}
           />
 
-          {/*<h3>Sentiment Distribution for Antagonists</h3>
+          <h3>Sentiment Distribution for Antagonists</h3>
           <Image
             src={`/images/films-analyzed/${slug}/sentiment_distribution_for_antagonist.png`}
             alt={`Sentiment Distribution for Antagonists in ${movie.title}`}
@@ -145,7 +145,7 @@ export default async function MoviePage({ params }) {
             width={800}
             height={600}
             className={styles.visualizationImage}
-          /> */}
+          />
 
         </div>
         <Link href="/films-analyzed" legacyBehavior>
