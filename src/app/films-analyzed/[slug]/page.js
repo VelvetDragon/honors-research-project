@@ -12,7 +12,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 export default async function MoviePage({ params }) {
   const { slug } = await params;
   const movie = moviesData.find((m) => m.slug === slug);
-  
+
   if (!movie) {
     notFound();
   }
@@ -56,14 +56,14 @@ export default async function MoviePage({ params }) {
           />
 
 
-        <h3>Average Sentiment by Character Role</h3>
+          <h3>Average Sentiment by Character Role</h3>
           <Image
             src={`/images/films-analyzed/${slug}/average_sentiment_by_char_role.png`}
             alt={`Average Sentiment by Character Role in ${movie.title}`}
             width={500}
             height={500}
             className={styles.visualizationImage}
-          /> 
+          />
 
           {/*<h3>Sentiment Distribution for Antagonists</h3>
           <Image
