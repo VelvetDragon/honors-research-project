@@ -1,0 +1,68 @@
+/* src/styles/Tabs.module.css */
+
+.tabsContainer {
+  margin-top: 2rem;
+  /* Optional: Add a background color to the tabs container */
+  background-color: var(
+    --background-color
+  ); /* Replace with your background color variable or value */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabButtons {
+  display: flex;
+  border-bottom: 2px solid var(--primary-color); /* Replace with your primary color */
+  overflow-x: auto;
+}
+
+.tabButton {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.1rem; /* Adjust font size as per your typography */
+  color: var(--text-color); /* Replace with your text color */
+  font-family: var(--font-family); /* Replace with your font family */
+  white-space: nowrap;
+}
+
+.tabButton:hover {
+  background-color: var(
+    --primary-color
+  ); /* Replace with your secondary color */
+  color: var(--background-color); /* Adjust text color on hover for contrast */
+}
+
+.active {
+  border-bottom: 3px solid var(--secondary-color); /* Highlight active tab with an accent color */
+  color: var(--accent-color); /* Active tab text color */
+  font-weight: bold;
+}
+
+.tabContent {
+  padding: 1.5rem;
+  background-color: var(
+    --background-color
+  ); /* Ensure content background matches container */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Optional: Responsive Design */
+@media (max-width: 768px) {
+  .tabButton {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .tabContent {
+    padding: 1rem;
+  }
+}

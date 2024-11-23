@@ -37,9 +37,9 @@ const Navbar = () => {
         <li className={pathname === '/films-analyzed' ? styles.active : ''}>
           <Link href="/films-analyzed">Films Analyzed</Link>
         </li>
-        <li className={pathname === '/data-visualizations' ? styles.active : ''}>
+        {/* <li className={pathname === '/data-visualizations' ? styles.active : ''}>
           <Link href="/data-visualizations">Data Visualizations</Link>
-        </li>
+        </li> */}
         <li className={pathname === '/findings-and-analysis' ? styles.active : ''}>
           <Link href="/findings-and-analysis">Findings & Analysis</Link>
         </li>
