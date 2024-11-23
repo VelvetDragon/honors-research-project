@@ -56,7 +56,7 @@ export default async function MoviePage({ params }) {
           />
 
 
-          <h3>Average Sentiment by Character Role</h3>
+          {/* <h3>Average Sentiment by Character Role</h3>
           <Image
             src={`/images/films-analyzed/${slug}/average_sentiment_by_char_role.png`}
             alt={`Average Sentiment by Character Role in ${movie.title}`}
@@ -145,7 +145,7 @@ export default async function MoviePage({ params }) {
             width={800}
             height={600}
             className={styles.visualizationImage}
-          />
+          /> */}
 
         </div>
         <Link href="/films-analyzed" legacyBehavior>
