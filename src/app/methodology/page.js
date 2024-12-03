@@ -224,10 +224,10 @@ export default function Methodology() {
         <div className={styles.analysisTechniques}>
           <h2>Analysis Techniques</h2>
           <p>
-            {/* The annotated data was subjected to various analytical techniques to uncover patterns and insights: */}
-            Still needs to be done completely ..... (trying to include things like descriptive statistic, correlation studies, visualizations etc)
+            The annotated data was subjected to various analytical techniques to uncover patterns and insights:
+            
           </p>
-          {/* <ul>
+          <ul>
             <li><strong>Descriptive Statistics:</strong> Calculating the distribution of sentiment scores across different demographic groups.</li>
             <li><strong>Comparative Analysis:</strong> Comparing sentiment distributions between privileged and marginalized backgrounds to identify disparities or trends.</li>
             <li><strong>Correlation Studies:</strong> Investigating the relationship between character attributes and the emotional tones of their dialogues.</li>
@@ -235,7 +235,7 @@ export default function Methodology() {
           </ul>
           <p>
             Python libraries such as Pandas, NumPy, and Matplotlib were instrumental in performing these analyses, providing robust data manipulation and visualization capabilities.
-          </p> */}
+          </p>
         </div>
       </AnimatedSection>
 
