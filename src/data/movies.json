@@ -4,6 +4,7 @@
     "title": "Mulan",
     "year": 1998,
     "director": "Tony Bancroft & Barry Cook",
+    "url": "https://www.disneyplus.com/movies/mulan/85wmj4hahA0B",
     "image": "/images/mulan.jpg",
     "description": "Analyzing the dialogues that portray Mulan's courage and honor.",
     "scriptExcerpt": "Mulan's key dialogues...",
@@ -29,6 +30,7 @@
     "year": 2016,
     "director": "Ron Clements & John Musker",
     "image": "/images/moana.jpg",
+    "url": "https://www.disneyplus.com/movies/moana/70GoJHflgHH9",
     "description": "Understanding the dialogues that portray Moana's courage and leadership.",
     "scriptExcerpt": "Moana's key dialogues...",
     "keySceneVideoId": "VIDEO_ID_2",
@@ -52,6 +54,7 @@
     "title": "The Princess and the Frog",
     "year": 2009,
     "director": "Ron Clements & John Musker",
+    "url": "https://www.disneyplus.com/movies/the-princess-and-the-frog/7TPAcC8QPGpm",
     "image": "/images/the-princess-and-the-frog.jpg",
     "description": "Examining dialogues that build the romantic narrative and character development.",
     "scriptExcerpt": "Tiana's key dialogues...",
@@ -78,6 +81,7 @@
     "director": "Mike Gabriel & Eric Goldberg",
     "image": "/images/pocahontas.jpg",
     "description": "Analyzing Pocahontas' dialogues in conveying cultural understanding and conflict.",
+    "url": "https://www.disneyplus.com/movies/pocahontas/2WjLTJt9dM5C?v=bf24",
     "scriptExcerpt": "Pocahontas' key dialogues...",
     "keySceneVideoId": "VIDEO_ID_4",
     "characters": [
@@ -102,6 +106,7 @@
     "director": "Ron Clements & John Musker",
     "image": "/images/aladdin.jpg",
     "description": "Exploring the emotional tones in Aladdin's dialogues and character interactions.",
+    "url": "https://www.disneyplus.com/movies/aladdin/2SngByljXESE?v=bf24",
     "scriptExcerpt": "Aladdin's key dialogues...",
     "keySceneVideoId": "VIDEO_ID_5",
     "characters": [
@@ -126,7 +131,7 @@
     "director": "Ron Clements & John Musker",
     "image": "/images/coco.jpg",
     "description": "Exploring the emotional tones in Coco's dialogues and character interactions.",
-    "scriptExcerpt": "Aladdin's key dialogues...",
+    "url": "https://www.disneyplus.com/movies/coco/db9orsI5O4gC?v=bf24",
     "keySceneVideoId": "VIDEO_ID_5",
     "characters": [
       {

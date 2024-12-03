@@ -6,11 +6,14 @@ import AnimatedSection from '@/components/AnimatedSection';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import movies from '@/data/movies.json';
 
-// Dynamically import MermaidChart with SSR disabled
+
 const MermaidChart = dynamic(() => import('@/components/MermaidChart'), { ssr: false });
 
 export default function Methodology() {
+
+  const sortedMovies = [...movies].sort((a,b) => a.year - b.year);
 
   const preprocessingFlowchart = `
     graph TD
@@ -34,7 +37,7 @@ export default function Methodology() {
         <div className={styles.overlay}>
           <h1>Methodology</h1>
           <p>
-            This section explains the <span>methods</span> used to study <span>emotional expressions</span> in Disney character dialogues. Using <span>sentiment analysis tools</span>, the research identifies and interprets <span>emotional tones</span> to find patterns that may support or challenge stereotypes. It covers data collection, preprocessing, and analysis. Ethical practices and validation steps are yet to be included.....
+            This section explains the <span>methods</span> used to study <span>emotional expressions</span> in Disney character dialogues. Using <span>sentiment analysis tools</span>, the research identifies and interprets <span>emotional tones</span> to find patterns that may support or challenge stereotypes. It covers data collection, preprocessing, and analysis.
           </p>
         </div>
       </section>
@@ -51,14 +54,14 @@ export default function Methodology() {
           <li>Genre Variation: Encompassing different genres to capture a wide range of dialogues</li>
         </ul>
         <p>Selected Films:</p>
-        <ul>
-          <li>Mulan</li>
-          <li>Moana</li>
-          <li>The Princess and the Frog</li>
-          <li>Pocahontas</li>
-          <li>Aladdin</li>
-          {/* <li>Raya and the Last Dragon</li> */}
-          <li>Coco</li>
+        <ul className={styles.horizontalList}>
+          {sortedMovies.map((movie) => (
+            <li key={movie.title}>
+              <a href={movie.url} target="_blank" rel="noopener noreferrer">
+                {movie.title} ({movie.year})
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -67,7 +70,7 @@ export default function Methodology() {
       <div className={styles.dataCollection}>
         <h2>Data Collection</h2>
         <p>
-          Scripts for the selected Disney films were sourced from reliable online databases such as <a href="https://www.springfieldspringfield.co.uk/" target="_blank" rel="noopener noreferrer">Springfield! Springfield!</a> and <a href="https://imsdb.com/" target="_blank" rel="noopener noreferrer">Internet Movie Script Database (IMSDb)</a>. The selection criteria included films released between 1990 and 2020, encompassing a diverse range of genres and characters.
+          Scripts for the selected Disney films were sourced from reliable online database such as <a href="https://imsdb.com/" target="_blank" rel="noopener noreferrer"> <span>Internet Movie Script Database (IMSDb) </span> </a>. The selection criteria included films released between 1990 and 2020, encompassing a diverse range of genres and characters.
         </p>
         <p>
           Each line of dialogue was meticulously extracted and tagged with the corresponding character’s identity, including attributes such as gender, race, and cultural background. This process was automated using custom Python scripts, ensuring accuracy and efficiency in data collection.
@@ -236,46 +239,6 @@ export default function Methodology() {
         </div>
       </AnimatedSection>
 
-      {/* Ethical Considerations Section */}
-      <AnimatedSection>
-        <div className={styles.ethics}>
-          <h2>Ethical Considerations</h2>
-          <p>
-            {/* Ethical guidelines were strictly adhered to throughout the research process. */}
-            Key considerations included:.............. (like bias mitigation, transparency etc)
-          </p>
-          {/* 
-          <ul>
-            <li><strong>Data Privacy:</strong> Ensuring that all data sourced from scripts did not infringe on intellectual property rights.</li>
-            <li><strong>Bias Mitigation:</strong> Actively working to identify and minimize any biases in data collection, annotation, and analysis.</li>
-            <li><strong>Transparency:</strong> Maintaining clear documentation of all methodologies and processes to allow for reproducibility and scrutiny.</li>
-          </ul>
-          <p>
-            By prioritizing these ethical standards, the research upholds integrity and fosters trust in the presented findings.
-          </p> 
-          */}
-        </div>
-      </AnimatedSection>
-
-      {/* Limitations Section */}
-      <AnimatedSection>
-        <div className={styles.limitations}>
-          <h2>Limitations</h2>
-          <p>
-            While this study provides valuable insights, it is not without limitations: .......
-          </p>
-          {/* 
-          <ul>
-            <li><strong>Scope of Data:</strong> The analysis is confined to scripts of selected Disney films released between 1990 and 2020, which may not represent all narratives or character developments.</li>
-            <li><strong>Sentiment Analysis Accuracy:</strong> Automated sentiment analysis tools, despite their sophistication, may misinterpret context-specific nuances or sarcasm inherent in dialogues.</li>
-            <li><strong>Demographic Categorization:</strong> The categorization of characters based on gender, race, and cultural background is subject to the accuracy and completeness of available data.</li>
-          </ul>
-          <p>
-            Future research could address these limitations by expanding the dataset, incorporating more advanced sentiment analysis techniques, and exploring additional demographic factors.
-          </p> 
-          */}
-        </div>
-      </AnimatedSection>
       <Link href="/films-analyzed" legacyBehavior>
             <a className={styles.nxtPage} aria-label="Next page"> Next page ➡ </a>
       </Link>

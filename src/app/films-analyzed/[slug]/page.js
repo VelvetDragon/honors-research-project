@@ -113,7 +113,7 @@ export default async function MoviePage({ params }) {
       label: 'Gender Analysis',
       content: (
         <>
-          
+
           <h3>Sentiment Distribution by Gender</h3>
           <ImageWithSkeleton
             src={`/images/films-analyzed/${slug}/sentiment_distribution_by_gender.png`}
@@ -170,7 +170,7 @@ export default async function MoviePage({ params }) {
             width={300}
             height={450}
             className={styles.poster}
-            priority={true} // Critical image should have priority
+            priority={true}
           />
           <div className={styles.details}>
             <h1>{movie.title}</h1>

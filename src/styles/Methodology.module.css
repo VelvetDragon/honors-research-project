@@ -314,6 +314,30 @@
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
+
+.horizontalList {
+  display: flex; 
+  gap: 15px; 
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.horizontalList li {
+  display: inline; 
+}
+
+.horizontalList a {
+  text-decoration: none;
+  color: var(--primary-color ); 
+}
+
+.horizontalList a:hover {
+  cursor: pointer;
+  text-decoration: underline; 
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
