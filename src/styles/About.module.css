@@ -167,21 +167,21 @@
 
 
 .hotLink_about {
-  color: yellow; 
+  color: #FFD700; 
   text-decoration: underline; 
 }
 
 .hotLink_about:visited {
-  color: yellow; 
+  color: #FFD700; 
 }
 
 .hotLink_about:hover {
   text-decoration: underline; 
-  color: yellow;
+  color: #FFD700;
 }
 
 .hotLink_about:active {
-  color: yellow; 
+  color: #FFD700; 
 }
 
 

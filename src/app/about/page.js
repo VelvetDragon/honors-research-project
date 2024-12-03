@@ -70,7 +70,9 @@ export default function About() {
             <div className={styles.researcherInfo}>
               <h3>Suwan Aryal</h3>
               <p>
-                I am Suwan Aryal, a sophomore student from Nepal majoring in Computer Science at the University of Southern Mississippi Honors College. I am interested in data science, data analysis, technology, design, and development. Throughout my studies, I have engaged in various projects that allow me to apply my skills in these areas. In addition to my academic work, I work on personal projects to further develop my abilities in software development and design. You can view my personal portfolio at{' '}
+                I am Suwan Aryal, a sophomore student from Nepal majoring in Computer Science at the University of Southern Mississippi Honors College. I am interested in data science, data analysis, design, and development. 
+
+                <br/>Throughout my studies, I have engaged in various projects that allow me to apply my skills in these areas. In addition to my academic work, I work on personal projects to further develop my abilities in software development and design. You can view my personal portfolio at{' '}
                 <a href="https://suone.vercel.app" target="_blank" rel="noopener noreferrer">
                   https://suone.vercel.app
                 </a>

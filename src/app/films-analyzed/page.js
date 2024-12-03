@@ -22,7 +22,7 @@ export default function FilmsAnalyzed() {
           </div>
           <div className={styles.buttonContainer}>
             <Link href="/findings-and-analysis" legacyBehavior>
-              <a className={styles.nxtPage} aria-label="Next page">Next page ➡</a>
+              <a className={styles.nxtPage} aria-label="Next page"> Next page ➡ </a>
             </Link>
           </div>
         </AnimatedSection>
