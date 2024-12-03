@@ -22,7 +22,7 @@ const MovieCard = ({ movie }) => {
         priority={false}
       />
       <div className={styles.content}>
-        <h3>{movie.title}</h3>
+        <h3>{movie.title} {`(${movie.year})`}</h3>
         <p>{movie.description}</p>
         <Link href={`/films-analyzed/${movie.slug}`} legacyBehavior>
           <a className={styles.button} aria-label={`View analysis of ${movie.title}`}>
