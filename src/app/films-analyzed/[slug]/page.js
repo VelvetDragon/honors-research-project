@@ -11,11 +11,18 @@ import ImageWithSkeleton from '@/components/ImageWithSkeleton'; // Default impor
 
 export default async function MoviePage({ params }) {
   const { slug } = await params;
-  const movie = moviesData.find((m) => m.slug === slug);
+  const sortedMovies = [...moviesData].sort((a, b) => a.year - b.year);
+  const movieIndex = sortedMovies.findIndex((m) => m.slug === slug);
+  const movie = sortedMovies[movieIndex];
+
+  //const movie = moviesData.find((m) => m.slug === slug);
 
   if (!movie) {
     notFound();
   }
+
+  const nextMovieIndex = (movieIndex + 1) % sortedMovies.length;
+  const nextMovie = sortedMovies[nextMovieIndex];
 
   // Define the tabs with their respective content
   const tabs = [
@@ -160,6 +167,8 @@ export default async function MoviePage({ params }) {
     },
   ];
 
+  
+
   return (
     <section className={styles.movie}>
       <AnimatedSection>
@@ -197,11 +206,20 @@ export default async function MoviePage({ params }) {
           {/* Render the Tabs component with defined tabs */}
           <Tabs tabs={tabs} />
         </div>
-        <Link href="/films-analyzed" legacyBehavior>
-          <a className={styles.backButton} aria-label="Back to Films Analyzed">
-            ← Back to Films Analyzed
-          </a>
-        </Link>
+        <div className={styles.navigationButtons}>
+          
+          <Link href="/films-analyzed" legacyBehavior>
+            <a className={styles.backButton} aria-label="Back to Films Analyzed">
+              ← Back to Films Analyzed
+            </a>
+          </Link>
+
+          <Link href={`/films-analyzed/${nextMovie.slug}`} legacyBehavior>
+            <a className={styles.nextButton} aria-label={`Go to next film: ${nextMovie.title}`}>
+              Go to Next Film: {nextMovie.title} ({nextMovie.year}) →
+            </a>
+          </Link>
+        </div>
       </AnimatedSection>
     </section>
   );

@@ -4,24 +4,66 @@
 import styles from '@/styles/Methodology.module.css';
 import AnimatedSection from '@/components/AnimatedSection';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import movies from '@/data/movies.json';
-
-
-const MermaidChart = dynamic(() => import('@/components/MermaidChart'), { ssr: false });
+import movies from '@/data/movies.js'; // Importing from movies.js
+import { useState } from 'react';
+import Modal from '@/components/Modal'; // Import the custom Modal component
 
 export default function Methodology() {
+  // Sort movies by year in ascending order
+  const sortedMovies = [...movies].sort((a, b) => a.year - b.year);
 
-  const sortedMovies = [...movies].sort((a,b) => a.year - b.year);
+  // State to manage modal visibility and selected movie
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [searchTerm, setSearchTerm] = useState(''); // State for search within modal
+  const [downloadSuccess, setDownloadSuccess] = useState(false); // State for download notification
 
-  const preprocessingFlowchart = `
-    graph TD
-        A[Data Collection] --> B[Data Cleaning]
-        B --> C[Data Normalization]
-        C --> D[Expanding Contractions]
-        D --> E[Preprocessed Data]
-  `;
+  // Function to open modal and set the selected movie
+  const openModal = (movie) => {
+    setSelectedMovie(movie);
+    setIsModalOpen(true);
+  };
+
+  // Function to close modal and reset selected movie and search term
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedMovie(null);
+    setSearchTerm('');
+  };
+
+  // Function to handle metadata download using native APIs
+  const downloadMetadata = () => {
+    if (!selectedMovie || !selectedMovie.character_metadata) return;
+
+    const dataStr = JSON.stringify(selectedMovie.character_metadata, null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${selectedMovie.slug}_character_metadata.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    // Trigger success notification
+    setDownloadSuccess(true);
+    setTimeout(() => setDownloadSuccess(false), 3000); // Hide after 3 seconds
+  };
+
+  // Function to filter metadata based on search term
+  const filterMetadata = (metadata) => {
+    if (!searchTerm) return metadata;
+    const filtered = {};
+    Object.keys(metadata).forEach((character) => {
+      if (character.toLowerCase().includes(searchTerm.toLowerCase())) {
+        filtered[character] = metadata[character];
+      }
+    });
+    return filtered;
+  };
 
   return (
     <div className={styles.methodologyContainer}>
@@ -50,13 +92,13 @@ export default function Methodology() {
         </p>
         <ul>
           <li>Release Year: 1990 - 2020</li>
-          <li>Diversity of Characters: Inclusion of various genders, races, and cultural backgrounds</li>
+          <li>Diversity of Characters: Inclusion of various genders and marginalized statuses</li>
           <li>Genre Variation: Encompassing different genres to capture a wide range of dialogues</li>
         </ul>
         <p>Selected Films:</p>
         <ul className={styles.horizontalList}>
           {sortedMovies.map((movie) => (
-            <li key={movie.title}>
+            <li key={movie.slug}>
               <a href={movie.url} target="_blank" rel="noopener noreferrer">
                 {movie.title} ({movie.year})
               </a>
@@ -66,17 +108,15 @@ export default function Methodology() {
       </div>
 
       {/* Data Collection Section */}
-
       <div className={styles.dataCollection}>
         <h2>Data Collection</h2>
         <p>
-          Scripts for the selected Disney films were sourced from reliable online database such as <a href="https://imsdb.com/" target="_blank" rel="noopener noreferrer"> <span>Internet Movie Script Database (IMSDb) </span> </a>. The selection criteria included films released between 1990 and 2020, encompassing a diverse range of genres and characters.
+          Scripts for the selected Disney films were sourced from reliable online databases such as the <a href="https://imsdb.com/" target="_blank" rel="noopener noreferrer"><span>Internet Movie Script Database (IMSDb)</span></a>. The selection criteria included films released between 1990 and 2020, encompassing a diverse range of genres and characters.
         </p>
         <p>
-          Each line of dialogue was meticulously extracted and tagged with the corresponding character’s identity, including attributes such as gender, race, and cultural background. This process was automated using custom Python scripts, ensuring accuracy and efficiency in data collection.
+          Each line of dialogue was meticulously extracted and tagged with the corresponding character’s identity, including attributes such as gender and marginalized status. This process was automated using custom Python scripts, ensuring accuracy and efficiency in data collection.
         </p>
       </div>
-
 
       {/* Data Preprocessing Section */}
       <AnimatedSection>
@@ -93,14 +133,14 @@ export default function Methodology() {
           <p>
             These preprocessing steps were implemented using Python&apos;s NLTK library, which offers robust tools for natural language processing tasks.
           </p>
-          {/* Flowchart Example */}
-          <div className={styles.flowchart}>
+          {/* Optional: Flowchart or Diagram */}
+          {/* <div className={styles.flowchart}>
             <MermaidChart chart={preprocessingFlowchart} />
-          </div>
+          </div> */}
         </div>
       </AnimatedSection>
 
-      {/* Sentiment Analysis */}
+      {/* Sentiment Analysis Section */}
       <AnimatedSection>
         <div className={styles.sentimentAnalysis}>
           <h2>Sentiment Analysis</h2>
@@ -115,11 +155,11 @@ export default function Methodology() {
           </p>
           <ul>
             <li>Identify prevalent emotional expressions among different characters.</li>
-            <li>Compare sentiment distributions across various demographic groups, such as gender, race, and cultural background.</li>
+            <li>Compare sentiment distributions across various demographic groups, focusing on gender and marginalized status.</li>
             <li>Uncover patterns that may either reinforce or challenge existing stereotypes in animated storytelling.</li>
           </ul>
           <p>
-            Sentiment analysis was conducted using VADER (Valence Aware Dictionary and sEntiment Reasoner).VADER sentiment is a rule-based and lexicon-based framework for sentiment analysis, with support for intensity estimation. The frameworks have performed as well as human raters on Twitter data <strong><sup><a href="/references/#cite4">4</a></sup></strong>. Further, VADER sentiment performed better or equally when compared against seven sentiment analysis lexicons.<strong><sup><a href="/references/#cite4">4</a></sup></strong> VADER was selected for its effectiveness in handling emoticons, slang, and the informal language often found in animated dialogues.
+            Sentiment analysis was conducted using VADER (Valence Aware Dictionary and sEntiment Reasoner). VADER sentiment is a rule-based and lexicon-based framework for sentiment analysis, with support for intensity estimation. The frameworks have performed as well as human raters on Twitter data <strong><sup><a href="/references/#cite4">4</a></sup></strong>. Further, VADER sentiment performed better or equally when compared against seven sentiment analysis lexicons.<strong><sup><a href="/references/#cite4">4</a></sup></strong> VADER was selected for its effectiveness in handling emoticons, slang, and the informal language often found in animated dialogues.
           </p>
           <p>
             Emotional expressions were categorized as:
@@ -137,7 +177,6 @@ export default function Methodology() {
           </p>
         </div>
       </AnimatedSection>
-
 
       {/* Tools Used Section */}
       <AnimatedSection>
@@ -204,7 +243,7 @@ export default function Methodology() {
         <div className={styles.dataAnnotation}>
           <h2>Data Annotation</h2>
           <p>
-            Beyond sentiment scores, the data was enriched with metadata about each character, including gender, race, and cultural background. This enrichment allows for a nuanced analysis of how different demographic groups are portrayed emotionally in Disney dialogues.
+            Beyond sentiment scores, the data was enriched with metadata about each character, including gender and marginalized status. This enrichment allows for a nuanced analysis of how different demographic groups are portrayed emotionally in Disney dialogues.
           </p>
           <p>
             The annotation process involved:
@@ -213,9 +252,68 @@ export default function Methodology() {
             <li><strong>Demographic Profiling:</strong> Categorizing characters based on predefined demographic attributes.</li>
             <li><strong>Cultural Contextualization:</strong> Understanding and labeling dialogues that are influenced by cultural nuances or references.</li>
           </ul>
-          {/* <p>
-            Tools such as <a href="https://www.labelbox.com/" target="_blank" rel="noopener noreferrer">Labelbox</a> were utilized to streamline the annotation process, ensuring consistency and accuracy in labeling.
-          </p> */}
+
+          {/* Character Metadata Display */}
+          <div className={styles.characterMetadata}>
+            <h2>Character Metadata Dictionary</h2>
+            {sortedMovies.map((movie) => (
+              <div key={movie.slug} className={styles.movieMetadata}>
+                <h3>{movie.title} ({movie.year})</h3>
+                {/* Button to open modal */}
+                <button onClick={() => openModal(movie)} className={styles.viewMetadataBtn}>
+                  View Metadata
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {/* Custom Modal */}
+          <Modal
+            isOpen={isModalOpen}
+            onClose={closeModal}
+            title={
+              selectedMovie
+                ? `${selectedMovie.title} (${selectedMovie.year}) - Character Metadata`
+                : ''
+            }
+          >
+            {/* Check if character_metadata exists */}
+            {selectedMovie && selectedMovie.character_metadata ? (
+              <>
+                {/* Search Input */}
+                <label htmlFor="character-search" className="visually-hidden">
+                  Search Characters
+                </label>
+                <input
+                  id="character-search"
+                  type="text"
+                  placeholder="Search characters..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className={styles.modalSearchInput}
+                />
+                {/* Character Metadata Display in Code Format */}
+                <pre className={styles.codeBlock}>
+                  <code>
+                    {JSON.stringify(filterMetadata(selectedMovie.character_metadata), null, 2)}
+                  </code>
+                </pre>
+                {/* Download Button */}
+                <button onClick={downloadMetadata} className={styles.downloadBtn}>
+                  Download Metadata
+                </button>
+              </>
+            ) : (
+              <p>No character metadata available for this movie.</p>
+            )}
+          </Modal>
+
+          {/* Download Success Notification */}
+          {downloadSuccess && (
+            <div className={styles.notification}>
+              Metadata download initiated!
+            </div>
+          )}
         </div>
       </AnimatedSection>
 
@@ -225,7 +323,6 @@ export default function Methodology() {
           <h2>Analysis Techniques</h2>
           <p>
             The annotated data was subjected to various analytical techniques to uncover patterns and insights:
-            
           </p>
           <ul>
             <li><strong>Descriptive Statistics:</strong> Calculating the distribution of sentiment scores across different demographic groups.</li>
@@ -239,8 +336,9 @@ export default function Methodology() {
         </div>
       </AnimatedSection>
 
+      {/* Navigation to Next Page */}
       <Link href="/films-analyzed" legacyBehavior>
-            <a className={styles.nxtPage} aria-label="Next page"> Next page ➡ </a>
+        <a className={styles.nxtPage} aria-label="Next page"> Next page ➡ </a>
       </Link>
     </div>
   );

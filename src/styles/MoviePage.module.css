@@ -47,16 +47,50 @@
   line-height: 1.6;
 }
 
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.nextButton,
 .backButton {
-  display: inline-block;
-  margin-top: 1.5rem;
-  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color, #1e90ff);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.nextButton:hover,
+.backButton:hover {
+  background-color: var(--primary-dark, #1c86ee);
+}
+
+.nextButton {
+  background-color: #28a745; /* Green for next button */
+}
+
+.nextButton:hover {
+  background-color: #218838;
+}
+
+.backButton {
+  background-color: #6c757d; /* Grey for back button */
 }
 
 .backButton:hover {
-  text-decoration: underline;
+  background-color: #5a6268;
+}
+
+/* Ensure consistent button styling */
+.nextButton,
+.backButton {
+  display: inline-block;
+  text-align: center;
 }
 
 .visualizationImage {

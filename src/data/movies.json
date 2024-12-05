@@ -22,9 +22,26 @@
         "race": "Asian",
         "culture": "Chinese"
       }
-    ]
+    ],
+    "character_metadata": {
+      "Mulan": {
+        "Gender": "Female",
+        "Race/Ethnicity": "Asian",
+        "Culture": "Chinese",
+        "Role": "Protagonist",
+        "Marginalized": true,
+        "POC": true
+      },
+      "Captain Li Shang": {
+        "Gender": "Male",
+        "Race/Ethnicity": "Asian",
+        "Culture": "Chinese",
+        "Role": "Supporting",
+        "Marginalized": false,
+        "POC": true
+      }
+    }
   },
-  
   {
     "slug": "the-princess-and-the-frog",
     "title": "The Princess and the Frog",
@@ -48,7 +65,25 @@
         "race": "Mixed",
         "culture": "New Orleans"
       }
-    ]
+    ],
+    "character_metadata": {
+      "Tiana": {
+        "Gender": "Female",
+        "Race/Ethnicity": "African American",
+        "Culture": "New Orleans",
+        "Role": "Protagonist",
+        "Marginalized": true,
+        "POC": true
+      },
+      "Prince Naveen": {
+        "Gender": "Male",
+        "Race/Ethnicity": "Mixed",
+        "Culture": "New Orleans",
+        "Role": "Supporting",
+        "Marginalized": false,
+        "POC": true
+      }
+    }
   },
   {
     "slug": "pocahontas",
@@ -73,7 +108,25 @@
         "race": "European",
         "culture": "British"
       }
-    ]
+    ],
+    "character_metadata": {
+      "Pocahontas": {
+        "Gender": "Female",
+        "Race/Ethnicity": "Native American",
+        "Culture": "Algonquian",
+        "Role": "Protagonist",
+        "Marginalized": true,
+        "POC": true
+      },
+      "John Smith": {
+        "Gender": "Male",
+        "Race/Ethnicity": "European",
+        "Culture": "British",
+        "Role": "Supporting",
+        "Marginalized": false,
+        "POC": true
+      }
+    }
   },
   {
     "slug": "aladdin",
@@ -98,7 +151,65 @@
         "race": "Middle Eastern",
         "culture": "Arabian"
       }
-    ]
+    ],
+    "character_metadata": {
+      "Aladdin": {
+        "Gender": "Male",
+        "Race/Ethnicity": "Middle Eastern",
+        "Culture": "Agrabah",
+        "Role": "Protagonist",
+        "Marginalized": true,
+        "POC": true
+      },
+      "Princess Jasmine": {
+        "Gender": "Female",
+        "Race/Ethnicity": "Middle Eastern",
+        "Culture": "Agrabah",
+        "Role": "Protagonist",
+        "Marginalized": true,
+        "POC": true
+      },
+      "Genie": {
+        "Gender": "Male",
+        "Race/Ethnicity": "Mythical Creature",
+        "Culture": "Magical Realm",
+        "Role": "Supporting",
+        "Marginalized": false,
+        "POC": false
+      },
+      "Jafar": {
+        "Gender": "Male",
+        "Race/Ethnicity": "Middle Eastern",
+        "Culture": "Agrabah",
+        "Role": "Antagonist",
+        "Marginalized": false,
+        "POC": true
+      },
+      "Iago": {
+        "Gender": "Male",
+        "Race/Ethnicity": "Parrot",
+        "Culture": "Agrabah",
+        "Role": "Supporting",
+        "Marginalized": false,
+        "POC": false
+      },
+      "Abu": {
+        "Gender": "Male",
+        "Race/Ethnicity": "Monkey",
+        "Culture": "Agrabah",
+        "Role": "Supporting",
+        "Marginalized": false,
+        "POC": false
+      },
+      "Sultan": {
+        "Gender": "Male",
+        "Race/Ethnicity": "Middle Eastern",
+        "Culture": "Agrabah",
+        "Role": "Supporting",
+        "Marginalized": false,
+        "POC": true
+      }
+    }
   },
   {
     "slug": "coco",
@@ -122,6 +233,24 @@
         "race": "Latino",
         "culture": "Mexican"
       }
-    ]
+    ],
+    "character_metadata": {
+      "Miguel": {
+        "Gender": "Male",
+        "Race/Ethnicity": "Latino",
+        "Culture": "Mexican",
+        "Role": "Protagonist",
+        "Marginalized": true,
+        "POC": true
+      },
+      "Héctor": {
+        "Gender": "Male",
+        "Race/Ethnicity": "Latino",
+        "Culture": "Mexican",
+        "Role": "Supporting",
+        "Marginalized": false,
+        "POC": true
+      }
+    }
   }
 ]

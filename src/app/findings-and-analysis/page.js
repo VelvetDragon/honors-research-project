@@ -7,7 +7,11 @@ import Image from 'next/image';
 
 export default function findingsandanalysis() {
   return (
-    <div>My findings </div>
+    <AnimatedSection>
+      <div></div>
+    </AnimatedSection>
+    
+    
     
   )
 }

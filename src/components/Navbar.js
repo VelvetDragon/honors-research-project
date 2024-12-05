@@ -4,17 +4,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/Navbar.module.css';
-import { usePathname } from 'next/navigation'; 
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
-  const pathname = usePathname(); 
+  const pathname = usePathname();
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
         <Link href="/">
           <Image
-            src="/images/disney-logo.png" 
+            src="/images/disney-logo.png"
             alt='mickey mouse ears'
             width={40}
             height={40}
@@ -43,9 +43,7 @@ const Navbar = () => {
         <li className={pathname === '/findings-and-analysis' ? styles.active : ''}>
           <Link href="/findings-and-analysis">Findings & Analysis</Link>
         </li>
-        <li className={pathname === '/conclusion' ? styles.active : ''}>
-          <Link href="/conclusion">Conclusion</Link>
-        </li>
+
         <li className={pathname === '/references' ? styles.active : ''}>
           <Link href="/references">References</Link>
         </li>
