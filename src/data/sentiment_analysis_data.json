@@ -1,0 +1,313 @@
+{
+  "Aladdin": {
+    "Average Sentiment Distribution": {
+      "Positive": 35.5,
+      "Neutral": 49.5,
+      "Negative": 15.0
+    },
+    "Sentiment by Character Role": {
+      "Antagonist": -0.25,
+      "Protagonist": 0.05,
+      "Supporting": 0.01
+    },
+    "Sentiment Distribution for Roles": {
+      "Antagonist": {
+        "Positive": 40,
+        "Neutral": 43,
+        "Negative": 17
+      },
+      "Protagonist": {
+        "Positive": 26.6,
+        "Neutral": 52.9,
+        "Negative": 20.5
+      },
+      "Supporting": {
+        "Positive": 24.7,
+        "Neutral": 50.0,
+        "Negative": 25.3
+      }
+    },
+    "Sentiment by Marginalized Status": {
+      "Marginalized": 0.0,
+      "Non-Marginalized": 0.01
+    },
+    "Sentiment Distribution by Marginalized Status": {
+      "Marginalized": {
+        "Positive": 22.9,
+        "Neutral": 54.3,
+        "Negative": 22.9
+      },
+      "Non-Marginalized": {
+        "Positive": 32.9,
+        "Neutral": 46.8,
+        "Negative": 20.3
+      }
+    },
+    "Dialogues by Gender": {
+      "Male": 500,
+      "Female": 450,
+      "Unknown": 10
+    },
+    "Sentiment by Gender": {
+      "Male": {
+        "Positive": 150,
+        "Neutral": 250,
+        "Negative": 100
+      },
+      "Female": {
+        "Positive": 120,
+        "Neutral": 220,
+        "Negative": 110
+      }
+    }
+  },
+
+  "Pocahontas": {
+    "Average Sentiment Distribution": {
+      "Positive": 30,
+      "Neutral": 50,
+      "Negative": 20
+    },
+    "Sentiment by Character Role": {
+      "Antagonist": -0.2,
+      "Protagonist": 0.1,
+      "Supporting": 0.2
+    },
+    "Sentiment Distribution for Roles": {
+      "Antagonist": {
+        "Positive": 14.3,
+        "Neutral": 28.6,
+        "Negative": 57.1
+      },
+      "Protagonist": {
+        "Positive": 21.7,
+        "Neutral": 52.2,
+        "Negative": 26.1
+      },
+      "Supporting": {
+        "Positive": 30.7,
+        "Neutral": 49.3,
+        "Negative": 20.0
+      }
+    },
+    "Sentiment by Marginalized Status": {
+      "Marginalized": -0.05,
+      "Non-Marginalized": 0.0
+    },
+    "Sentiment Distribution by Marginalized Status": {
+      "Marginalized": {
+        "Positive": 24.6,
+        "Neutral": 52.4,
+        "Negative": 23.0
+      },
+      "Non-Marginalized": {
+        "Positive": 34.3,
+        "Neutral": 43.3,
+        "Negative": 22.4
+      }
+    },
+    "Dialogues by Gender": {
+      "Male": 140,
+      "Female": 70
+    },
+    "Sentiment by Gender": {
+      "Male": {
+        "Positive": 40,
+        "Neutral": 60,
+        "Negative": 40
+      },
+      "Female": {
+        "Positive": 20,
+        "Neutral": 30,
+        "Negative": 20
+      }
+    }
+  },
+
+  "Mulan": {
+    "Average Sentiment Distribution": {
+      "Positive": 30,
+      "Neutral": 50,
+      "Negative": 20
+    },
+    "Sentiment by Character Role": {
+      "Antagonist": 0.0,
+      "Protagonist": 0.05,
+      "Supporting": 0.02
+    },
+    "Sentiment Distribution for Roles": {
+      "Antagonist": {
+        "Positive": 36.6,
+        "Neutral": 39.4,
+        "Negative": 23.9
+      },
+      "Protagonist": {
+        "Positive": 25.5,
+        "Neutral": 51.0,
+        "Negative": 23.5
+      },
+      "Supporting": {
+        "Positive": 27.6,
+        "Neutral": 46.2,
+        "Negative": 26.2
+      }
+    },
+    "Sentiment by Marginalized Status": {
+      "Marginalized": 0.01,
+      "Non-Marginalized": 0.02
+    },
+    "Sentiment Distribution by Marginalized Status": {
+      "Marginalized": {
+        "Positive": 31.6,
+        "Neutral": 42.8,
+        "Negative": 25.7
+      },
+      "Non-Marginalized": {
+        "Positive": 26.2,
+        "Neutral": 49.2,
+        "Negative": 24.6
+      }
+    },
+    "Dialogues by Gender": {
+      "Male": 600,
+      "Female": 150
+    },
+    "Sentiment by Gender": {
+      "Male": {
+        "Positive": 150,
+        "Neutral": 300,
+        "Negative": 150
+      },
+      "Female": {
+        "Positive": 50,
+        "Neutral": 75,
+        "Negative": 25
+      }
+    }
+  },
+
+  "Coco": {
+    "Average Sentiment Distribution": {
+      "Positive": 40,
+      "Neutral": 40,
+      "Negative": 20
+    },
+    "Sentiment by Character Role": {
+      "Antagonist": -0.2,
+      "Protagonist": 0.2,
+      "Supporting": 0.1
+    },
+    "Sentiment Distribution for Roles": {
+      "Antagonist": {
+        "Positive": 20,
+        "Neutral": 40,
+        "Negative": 40
+      },
+      "Protagonist": {
+        "Positive": 50,
+        "Neutral": 30,
+        "Negative": 20
+      },
+      "Supporting": {
+        "Positive": 30,
+        "Neutral": 50,
+        "Negative": 20
+      }
+    },
+    "Sentiment by Marginalized Status": {
+      "Marginalized": 0.1,
+      "Non-Marginalized": 0.05
+    },
+    "Sentiment Distribution by Marginalized Status": {
+      "Marginalized": {
+        "Positive": 30,
+        "Neutral": 50,
+        "Negative": 20
+      },
+      "Non-Marginalized": {
+        "Positive": 40,
+        "Neutral": 40,
+        "Negative": 20
+      }
+    },
+    "Dialogues by Gender": {
+      "Male": 300,
+      "Female": 200
+    },
+    "Sentiment by Gender": {
+      "Male": {
+        "Positive": 100,
+        "Neutral": 150,
+        "Negative": 50
+      },
+      "Female": {
+        "Positive": 80,
+        "Neutral": 100,
+        "Negative": 20
+      }
+    }
+  },
+
+  "Princess and the Frog": {
+                       
+    "Average Sentiment Distribution": {
+      "Positive": 120,
+      "Neutral": 140,
+      "Negative": 90
+    },
+    "Sentiment by Character Role": {
+      "Antagonist": -0.05,
+      "Protagonist": 0.1,
+      "Supporting": 0.07
+    },
+    "Sentiment Distribution for Roles": {
+      "Antagonist": {
+        "Positive": 35.0,
+        "Neutral": 40.0,
+        "Negative": 25.0
+      },
+      "Protagonist": {
+        "Positive": 45.0,
+        "Neutral": 35.0,
+        "Negative": 20.0
+      },
+      "Supporting": {
+        "Positive": 38.0,
+        "Neutral": 42.0,
+        "Negative": 20.0
+      }
+    },
+    "Sentiment by Marginalized Status": {
+      "Marginalized": 0.05,
+      "Non-Marginalized": 0.07
+    },
+    "Sentiment Distribution by Marginalized Status": {
+      "Marginalized": {
+        "Positive": 30.0,
+        "Neutral": 50.0,
+        "Negative": 20.0
+      },
+      "Non-Marginalized": {
+        "Positive": 42.0,
+        "Neutral": 45.0,
+        "Negative": 13.0
+      }
+    },
+    "Dialogues by Gender": {
+      "Female": 180,
+      "Male": 120
+    },
+    "Sentiment by Gender": {
+      "Female": {
+        "Positive": 70,
+        "Neutral": 80,
+        "Negative": 30
+      },
+      "Male": {
+        "Positive": 50,
+        "Neutral": 60,
+        "Negative": 40
+      }
+    }
+  }
+}

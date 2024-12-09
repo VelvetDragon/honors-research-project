@@ -1,0 +1,108 @@
+.findingsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+}
+
+.mainTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-family: "Berkshire Swash", serif;
+}
+
+.block {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.blockTitle {
+  color: var(--secondary-color, #ffb700);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: "Berkshire Swash", serif;
+}
+
+/* Observations List */
+.observationsList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.observationsList li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.observationsList li:before {
+  content: "✓";
+  color: #66bb6a;
+  position: absolute;
+  left: 0;
+}
+
+/* Chart Container for Evolution Over Time */
+.chartContainer {
+  margin: 2rem 0;
+}
+.pieChart{
+  display: flex;
+}
+/* Existing styles remain for other elements */
+.subSubSectionTitle {
+  color: var(--secondary-color, #ffb700);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-family: "Berkshire Swash", serif;
+}
+
+.intro, .analysis, .implications, .conclusion {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  color: var(--primary-color, #1e90ff);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: "Berkshire Swash", serif;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .block {
+    padding: 1.5rem;
+  }
+
+  .blockTitle {
+    font-size: 1.3rem;
+  }
+
+  .subSubSectionTitle {
+    font-size: 1.1rem;
+  }
+
+  .intro,
+  .analysis,
+  .implications,
+  .conclusion {
+    font-size: 0.95rem;
+  }
+}

@@ -6,8 +6,8 @@ import moviesData from '@/data/movies.json';
 import styles from '@/styles/MoviePage.module.css';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
-import Tabs from '@/components/Tabs'; // Default import
-import ImageWithSkeleton from '@/components/ImageWithSkeleton'; // Default import
+import Tabs from '@/components/Tabs'; 
+import ImageWithSkeleton from '@/components/ImageWithSkeleton'; 
 
 export default async function MoviePage({ params }) {
   const { slug } = await params;
@@ -15,7 +15,7 @@ export default async function MoviePage({ params }) {
   const movieIndex = sortedMovies.findIndex((m) => m.slug === slug);
   const movie = sortedMovies[movieIndex];
 
-  //const movie = moviesData.find((m) => m.slug === slug);
+  
 
   if (!movie) {
     notFound();
@@ -167,60 +167,67 @@ export default async function MoviePage({ params }) {
     },
   ];
 
-  
+
 
   return (
-    <section className={styles.movie}>
-      <AnimatedSection>
-        <div className={styles.header}>
-          <Image
-            src={movie.image}
-            alt={`${movie.title} Poster`}
-            width={300}
-            height={450}
-            className={styles.poster}
-            priority={true}
-          />
-          <div className={styles.details}>
-            <h1>{movie.title}</h1>
-            <p>
-              <strong>Release Year:</strong> {movie.year}
-            </p>
-            <p>
-              <strong>Director:</strong> {movie.director}
-            </p>
-            <p>{movie.description}</p>
+    <div className={styles.slugContainer}>
+      <section className={styles.movie}>
+        <AnimatedSection>
+          <div className={styles.header}>
+            <Image
+              src={movie.image}
+              alt={`${movie.title} Poster`}
+              width={300}
+              height={450}
+              className={styles.poster}
+              priority={true}
+            />
+            <div className={styles.details}>
+              <h1>{movie.title}</h1>
+              <p>
+                <strong>Release Year:</strong> {movie.year}
+              </p>
+              <p>
+                <strong>Director:</strong> {movie.director}
+              </p>
+              <p>{movie.description}</p>
+            </div>
           </div>
-        </div>
-      </AnimatedSection>
-      <AnimatedSection>
-        <div className={styles.analysis}>
-          <h2>Sentiment Analysis</h2>
-          <p>
-            This section delves into the emotional tones conveyed through the dialogues of characters in{' '}
-            <strong>{movie.title}</strong>. Using sentiment analysis tools like VADER, I have categorized
-            dialogues into positive, neutral, and negative sentiments to uncover underlying patterns and
-            stereotypes.
-          </p>
+        </AnimatedSection>
+        <AnimatedSection>
+          <div className={styles.analysis}>
+            <h2>Sentiment Analysis</h2>
+            <p>
+              This section delves into the emotional tones conveyed through the dialogues of characters in{' '}
+              <strong>{movie.title}</strong>. Using sentiment analysis tools like VADER, I have categorized
+              dialogues into positive, neutral, and negative sentiments to uncover underlying patterns and
+              stereotypes.
+            </p>
 
-          {/* Render the Tabs component with defined tabs */}
-          <Tabs tabs={tabs} />
-        </div>
-        <div className={styles.navigationButtons}>
-          
-          <Link href="/films-analyzed" legacyBehavior>
-            <a className={styles.backButton} aria-label="Back to Films Analyzed">
-              ← Back to Films Analyzed
-            </a>
-          </Link>
+            {/* Render the Tabs component with defined tabs */}
+            <Tabs tabs={tabs} />
+          </div>
+          <div className={styles.navigationButtons}>
 
-          <Link href={`/films-analyzed/${nextMovie.slug}`} legacyBehavior>
-            <a className={styles.nextButton} aria-label={`Go to next film: ${nextMovie.title}`}>
-              Go to Next Film: {nextMovie.title} ({nextMovie.year}) →
-            </a>
-          </Link>
-        </div>
-      </AnimatedSection>
-    </section>
+            <Link href="/films-analyzed" legacyBehavior>
+              <a className={styles.backButton} aria-label="Back to Films Analyzed">
+                ← Back to Films Analyzed
+              </a>
+            </Link>
+
+            <Link href={`/films-analyzed/${nextMovie.slug}`} legacyBehavior>
+              <a className={styles.nextButton} aria-label={`Go to next film: ${nextMovie.title}`}>
+                Go to Next Film: {nextMovie.title} ({nextMovie.year}) →
+              </a>
+            </Link>
+          </div>
+        </AnimatedSection>
+      </section>
+      <div className={styles.buttonContainer}>
+            <Link href="/findings-and-analysis" legacyBehavior>
+              <a className={styles.nxtPage} aria-label="Next page"> Next page ➡ </a>
+            </Link>
+      </div>
+    </div>
   );
 }

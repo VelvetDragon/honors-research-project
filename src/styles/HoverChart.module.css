@@ -1,0 +1,42 @@
+/* src/styles/HoverChart.module.css */
+
+.hoverChartWrapper {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline dotted;
+    color: #007bff;
+  }
+  
+  .hoverChartWrapper:hover {
+    color: #0056b3;
+  }
+  
+  .chartPopover {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 0.5rem;
+  }
+  
+  .chartPopover canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    .chartPopover {
+      width: 90%;
+      left: 5%;
+      transform: translateX(0);
+    }
+  }
+  

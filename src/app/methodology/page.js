@@ -8,8 +8,19 @@ import Link from 'next/link';
 import movies from '@/data/movies.js'; // Importing from movies.js
 import { useState } from 'react';
 import Modal from '@/components/Modal'; // Import the custom Modal component
+import Mermaid from '@/components/MermaidChart';
 
 export default function Methodology() {
+
+  const preprocessingFlowchart = `
+    graph TD;
+      A[Raw Script Data] --> B[Data Cleaning];
+      B --> C[Data Normalization];
+      C --> D[Expanding Contractions];
+      D --> E[Prepared Dataset for Analysis];
+  `;
+
+
   // Sort movies by year in ascending order
   const sortedMovies = [...movies].sort((a, b) => a.year - b.year);
 
@@ -63,6 +74,7 @@ export default function Methodology() {
       }
     });
     return filtered;
+
   };
 
   return (
@@ -134,9 +146,10 @@ export default function Methodology() {
             These preprocessing steps were implemented using Python&apos;s NLTK library, which offers robust tools for natural language processing tasks.
           </p>
           {/* Optional: Flowchart or Diagram */}
-          {/* <div className={styles.flowchart}>
-            <MermaidChart chart={preprocessingFlowchart} />
-          </div> */}
+          <div className={styles.flowchart}>
+            <h3>Preprocessing Flowchart</h3>
+            <Mermaid chart={preprocessingFlowchart} />
+          </div>
         </div>
       </AnimatedSection>
 
@@ -145,10 +158,10 @@ export default function Methodology() {
         <div className={styles.sentimentAnalysis}>
           <h2>Sentiment Analysis</h2>
           <p>
-            <strong>Sentiment Analysis</strong>, also known as opinion mining, is a natural language processing (NLP) technique used to determine the emotional tone behind a series of words. Sentiment analysis is the extraction of sentiment, opinions, and emotions from text. It aims to identify and categorize opinions expressed in a text, especially to determine the writer's attitude towards a particular topic, product, or context. <strong><sup><a href="/references/#cite5">5</a></sup></strong>
+            <strong>Sentiment Analysis</strong>, also known as opinion mining, is a natural language processing (NLP) technique used to determine the emotional tone behind a series of words. Sentiment analysis is the extraction of sentiment, opinions, and emotions from text. It aims to identify and categorize opinions expressed in a text, especially to determine the writer's attitude towards a particular topic, product, or context. <strong><sup><a href="/references/#cite5">[5]</a></sup></strong>
           </p>
           <p>
-            Originating from the need to analyze customer feedback and social media sentiments, sentiment analysis has evolved with advancements in machine learning and deep learning. Today, it encompasses various approaches, including lexicon-based methods and machine learning models.<strong><sup><a href="/references/#cite1">1</a></sup></strong>
+            Originating from the need to analyze customer feedback and social media sentiments, sentiment analysis has evolved with advancements in machine learning and deep learning. Today, it encompasses various approaches, including lexicon-based methods and machine learning models.<strong><sup><a href="/references/#cite1">[1]</a></sup></strong>
           </p>
           <p>
             In this research, sentiment analysis serves as a pivotal tool to dissect and understand the emotional undertones embedded in Disney character dialogues. By quantifying emotions, the study aims to:
@@ -159,7 +172,7 @@ export default function Methodology() {
             <li>Uncover patterns that may either reinforce or challenge existing stereotypes in animated storytelling.</li>
           </ul>
           <p>
-            Sentiment analysis was conducted using VADER (Valence Aware Dictionary and sEntiment Reasoner). VADER sentiment is a rule-based and lexicon-based framework for sentiment analysis, with support for intensity estimation. The frameworks have performed as well as human raters on Twitter data <strong><sup><a href="/references/#cite4">4</a></sup></strong>. Further, VADER sentiment performed better or equally when compared against seven sentiment analysis lexicons.<strong><sup><a href="/references/#cite4">4</a></sup></strong> VADER was selected for its effectiveness in handling emoticons, slang, and the informal language often found in animated dialogues.
+            Sentiment analysis was conducted using VADER (Valence Aware Dictionary and sEntiment Reasoner). VADER sentiment is a rule-based and lexicon-based framework for sentiment analysis, with support for intensity estimation. The frameworks have performed as well as human raters on Twitter data <strong><sup><a href="/references/#cite4">[4]</a></sup></strong>. Further, VADER sentiment performed better or equally when compared against seven sentiment analysis lexicons.<strong><sup><a href="/references/#cite4">[4]</a></sup></strong> VADER was selected for its effectiveness in handling emoticons, slang, and the informal language often found in animated dialogues.
           </p>
           <p>
             Emotional expressions were categorized as:
@@ -333,8 +346,19 @@ export default function Methodology() {
           <p>
             Python libraries such as Pandas, NumPy, and Matplotlib were instrumental in performing these analyses, providing robust data manipulation and visualization capabilities.
           </p>
+          <p>
+            The project also draws inspiration from broader sentiment analysis techniques, such as 
+            those used by Karen Ouyang in her project, <em>"Once Upon A Time: NLP on Disney Movie Scripts & Their Original Stories"</em>. <strong><sup><a href="/references/#cite6">[6]</a></sup></strong>
+            Her approach employed Word2Vec and PCA to visualize emotional relationships between characters 
+            in both Disney movies and their original literary sources. While this analysis focuses solely 
+            on Disney scripts, incorporating such comparative methodologies highlights how sentiment trends 
+            are influenced by cultural adaptations and narrative simplifications. This perspective helps 
+            contextualize findings within broader storytelling patterns, offering a deeper understanding 
+            of the emotional nuances in Disney narratives.
+          </p>
         </div>
       </AnimatedSection>
+
 
       {/* Navigation to Next Page */}
       <Link href="/films-analyzed" legacyBehavior>

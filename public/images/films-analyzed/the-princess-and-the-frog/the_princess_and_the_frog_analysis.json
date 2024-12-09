@@ -1,0 +1,64 @@
+{
+    "movie_title": "The Princess and the Frog",
+    "visual_analysis": {
+        "average_sentiment_distribution": {
+            "Positive": 120,
+            "Neutral": 140,
+            "Negative": 90
+        },
+        "average_sentiment_by_marginalized_status": {
+            "Marginalized": 0.05,
+            "Non-Marginalized": 0.07
+        },
+        "sentiment_distribution_for_roles": {
+            "Antagonist": {
+                "Positive": 35.0,
+                "Neutral": 40.0,
+                "Negative": 25.0
+            },
+            "Protagonist": {
+                "Positive": 45.0,
+                "Neutral": 35.0,
+                "Negative": 20.0
+            },
+            "Supporting": {
+                "Positive": 38.0,
+                "Neutral": 42.0,
+                "Negative": 20.0
+            }
+        },
+        "average_sentiment_by_character_role": {
+            "Antagonist": -0.05,
+            "Protagonist": 0.1,
+            "Supporting": 0.07
+        },
+        "sentiment_distribution_by_marginalized_status": {
+            "Marginalized": {
+                "Positive": 30.0,
+                "Neutral": 50.0,
+                "Negative": 20.0
+            },
+            "Non-Marginalized": {
+                "Positive": 42.0,
+                "Neutral": 45.0,
+                "Negative": 13.0
+            }
+        },
+        "dialogue_distribution_by_gender": {
+            "Female": 180,
+            "Male": 120
+        },
+        "sentiment_distribution_by_gender": {
+            "Female": {
+                "Positive": 70,
+                "Neutral": 80,
+                "Negative": 30
+            },
+            "Male": {
+                "Positive": 50,
+                "Neutral": 60,
+                "Negative": 40
+            }
+        }
+    }
+}

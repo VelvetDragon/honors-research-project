@@ -25,7 +25,7 @@ const movies = [
           race: 'Middle Eastern',
           culture: 'Arabian',
         },
-        // Add more characters as needed
+        
       ],
       character_metadata: {
         Aladdin: {
