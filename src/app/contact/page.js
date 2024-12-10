@@ -57,7 +57,7 @@ function ContactForm() {
 export default function ContactPage() {
   return (
     <section className={styles.contact}>
-      <h1>Contact Us</h1>
+      <h1>Contact Me</h1>
       <ContactForm />
     </section>
   );
