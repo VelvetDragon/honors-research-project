@@ -77,11 +77,14 @@ export default function About() {
                   https://suone.vercel.app
                 </a>
                 , where I showcase my projects and skills.
+
+                
               </p>
             </div>
           </div>
         </div>
       </AnimatedSection>
+      
 
 
 

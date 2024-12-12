@@ -156,6 +156,7 @@ export default function Methodology() {
       {/* Sentiment Analysis Section */}
       <AnimatedSection>
         <div className={styles.sentimentAnalysis}>
+
           <h2>Sentiment Analysis</h2>
           <p>
             <strong>Sentiment Analysis</strong>, also known as opinion mining, is a natural language processing (NLP) technique used to determine the emotional tone behind a series of words. Sentiment analysis is the extraction of sentiment, opinions, and emotions from text. It aims to identify and categorize opinions expressed in a text, especially to determine the writer's attitude towards a particular topic, product, or context. <strong><sup><a href="/references/#cite5">[5]</a></sup></strong>
@@ -188,7 +189,12 @@ export default function Methodology() {
           <p>
             The VADER tool was integrated into the analysis pipeline using Python&apos;s <code>vaderSentiment</code> library, allowing for efficient and scalable sentiment scoring of extensive dialogue datasets.
           </p>
+
+          <h2>View Sentiment Analysis Code on Github</h2>
+          <a href='https://github.com/VelvetDragon/disney-films-emotion-NLP' target='_blank' className='hotlink_about'> <span> Github Link </span></a>
+
         </div>
+
       </AnimatedSection>
 
       {/* Tools Used Section */}
@@ -347,13 +353,13 @@ export default function Methodology() {
             Python libraries such as Pandas, NumPy, and Matplotlib were instrumental in performing these analyses, providing robust data manipulation and visualization capabilities.
           </p>
           <p>
-            The project also draws inspiration from broader sentiment analysis techniques, such as 
+            The project also draws inspiration from broader sentiment analysis techniques, such as
             those used by Karen Ouyang in her project, <em>"Once Upon A Time: NLP on Disney Movie Scripts & Their Original Stories"</em>. <strong><sup><a href="/references/#cite6">[6]</a></sup></strong>
-            Her approach employed Word2Vec and PCA to visualize emotional relationships between characters 
-            in both Disney movies and their original literary sources. While this analysis focuses solely 
-            on Disney scripts, incorporating such comparative methodologies highlights how sentiment trends 
-            are influenced by cultural adaptations and narrative simplifications. This perspective helps 
-            contextualize findings within broader storytelling patterns, offering a deeper understanding 
+            Her approach employed Word2Vec and PCA to visualize emotional relationships between characters
+            in both Disney movies and their original literary sources. While this analysis focuses solely
+            on Disney scripts, incorporating such comparative methodologies highlights how sentiment trends
+            are influenced by cultural adaptations and narrative simplifications. This perspective helps
+            contextualize findings within broader storytelling patterns, offering a deeper understanding
             of the emotional nuances in Disney narratives.
           </p>
         </div>
